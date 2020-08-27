@@ -1,0 +1,9 @@
+
+  <div class ='card' id='<%= email.id %>'>
+    <% if email.read %>
+      <%= link_to email.object, email_path(email.id), remote: true, class: 'card-header h5 p-0'%>
+    <% else %>
+      <%= link_to email.object, email_path(email.id), remote: true, class: 'font-weight-bold card-header h5 p-0'%>
+    <% end %>
+    <p class='card-body p-0 m-0'><%= email.created_at %></p>
+  </div>

@@ -1,0 +1,16 @@
+<div class='card'>
+    <div class='card-header'>
+        <ul>
+            <li><b>Object: </b><%= email.object%></li>
+            <li><b>Received: </b><%= email.created_at %>
+        </ul>
+    </div>
+    <div class='card-body'>
+        <%= email.body %>
+        <%= %>
+    </div>
+    <div class='card-footer'>
+        <%= link_to 'Supprimer', email, method: 'delete', class: 'btn btn-danger', remote: true %>
+        <%= link_to 'Marquer comme non-lu', email, method: 'patch', class: 'btn btn-secondary', remote: true, id: "btn-read" %>
+    </div>
+</div>

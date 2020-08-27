@@ -1,0 +1,8 @@
+
+if (<%= @email.read %> == true) {
+    document.getElementById("<%= @email.id %>").children[0].classList.remove('font-weight-bold');
+} else {
+    document.getElementById("<%= @email.id %>").children[0].classList.add('font-weight-bold');
+}
+
+document.getElementById("btn-read").innerHTML = "<%= @innerHTML %>"
